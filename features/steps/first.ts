@@ -5,8 +5,8 @@ import { World } from 'playwright-bdd';
 Given('I open url {string}', async function (this: World, url: string) {
   await this.page.goto(url);
   // if cookie banner exists, close it
-  const cookieButton = await this.page.getByRole('button', { name: 'Accept all cookies' });
-  if (cookieButton) {
+  const cookieButton = this.page.getByRole('button', { name: 'Accept all cookies' });
+  if (await cookieButton.isVisible()) {
     await cookieButton.click();
   }
 });
@@ -22,6 +22,21 @@ Then('I see in title {string}', async function (this: World, keyword: string) {
 Given('we open {string} using {string}', async function (a, b){
   console.info(a,b)
 });
+
+When('I do these actions', async function (this: World, table) {
+  console.info(table)
+  console.info(table.rawTable)
+  console.info(table.rawTable[0])
+  console.info(this.browserName)
+  console.info(this.testInfo)
+  console.info(this.testInfo.title)
+  console.info(this.testInfo.skip())
+  console.info(this.testInfo.title) // won't get to this breakpoint
+});
+
+Then('I should see some debug output', async function (this: World) {
+  //
+})
 
 When("I search for {string}", async function (this: World, town: string) {
   const srch = await this.page.locator("#search-box-input");
