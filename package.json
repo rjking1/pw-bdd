@@ -9,6 +9,7 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "test": "npx bddgen && npx playwright test"
+    "test": "npx bddgen && npx playwright test",
+    "ui": "npx bddgen && npx playwright test --ui"
   }
 }
