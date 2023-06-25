@@ -1,6 +1,6 @@
 Feature: Playwright site
 
-    lh lkj kjh kjh kjh kjh 
+    npx bddgen && npx playwright test
 
     @1001
     Scenario: Check title
@@ -25,12 +25,6 @@ Feature: Playwright site
         | action 0 |
         | action 1 |
         | action 2 |
-        Then I should see somedebg output
+        Then I should see some debug output
 
-    @1004
-    Scenario: Check ABC emergency
-        Given I open url "https://abc.net.au/emergency"
-        When I search for "Melbourne"
-        Then I see in title "Search results"
-        # Then go to first incident
 

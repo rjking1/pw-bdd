@@ -28,8 +28,9 @@ When('I do these actions', async function (this: World, table) {
   console.info(table.rawTable)
   console.info(table.rawTable[0])
   console.info(this.browserName)
-  console.info(this.testInfo)
+  // console.info(this.testInfo)
   console.info(this.testInfo.title)
+  console.info(this.tags)
   console.info(this.testInfo.skip())
   console.info(this.testInfo.title) // won't get to this breakpoint
 });
