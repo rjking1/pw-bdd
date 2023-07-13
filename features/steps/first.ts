@@ -40,7 +40,8 @@ Then('I should see some debug output', async function (this: World) {
 })
 
 When("I search for {string}", async function (this: World, town: string) {
-  const srch = await this.page.locator("#search-box-input");
+  // const srch = await this.page.locator("#search-box-input");
+  const srch = await this.page.getByPlaceholder('Enter suburb or postcode');
   await srch.click();
   await srch.fill(town);
   // await this.page.waitForTimeout(1000); // #1
@@ -55,4 +56,8 @@ When("I search for {string}", async function (this: World, town: string) {
   await this.page.waitForTimeout(1000);
   await this.page.waitForTimeout(1000);
   await this.page.waitForTimeout(1000);
+})
+
+Then("take a full screen shot of {string}", async function(this: World, town: string) {
+  await this.page.screenshot({ path: `${town}.png`, fullPage: true });
 })
