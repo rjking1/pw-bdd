@@ -1,10 +1,10 @@
 import { defineConfig, devices } from '@playwright/test';
-import { defineBddConfig } from 'playwright-bdd';
+import { defineBddConfig } from 'playwright-bdd-rk';
 
 const testDir = defineBddConfig({
   paths: ['features/*.feature'],
   require: ['features/steps/*.ts'],
-  requireModule: ['ts-node/register'],
+  // requireModule: ['ts-node/register'],
 });
 
 // export default defineConfig({

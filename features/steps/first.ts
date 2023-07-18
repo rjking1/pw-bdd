@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 import { Given, When, Then } from '@cucumber/cucumber';
-import { World } from 'playwright-bdd';
+import { World } from 'playwright-bdd-rk';
 
 Given('I open url {string}', async function (this: World, url: string) {
   await this.page.goto(url);
