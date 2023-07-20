@@ -3,7 +3,8 @@ Feature: ABC emergency site
 
     put emergency in sep feature file as slow to run
 
-    @4001
+
+    @4001 @focus
     Scenario: Check ABC emergency in vic
         Given I open url "https://abc.net.au/emergency"
         When I search for "Melbourne"

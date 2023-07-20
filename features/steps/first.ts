@@ -36,7 +36,7 @@ When('I do these actions', async function (this: World, table) {
 });
 
 Then('I should see some debug output', async function (this: World) {
-  //
+  console.debug("debug output")
 })
 
 When("I search for {string}", async function (this: World, town: string) {
