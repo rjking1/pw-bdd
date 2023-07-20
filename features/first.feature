@@ -18,10 +18,14 @@ Feature: Playwright site
     Examples:
         | Header1 | Header 2 | Header3 |
         | Value 1 | Value 2 | Value 3 |
-    @2002.2
+    @2002.2 @focus
     Examples:
         | Header1 | Header 2 | Header3 |
         | Value a | Value b  | Value c |
+    @2002.3
+    Examples:
+        | Header1 | Header 2 | Header3 |
+        | Value x | Value y  | Value z |
 
     @2003
     Scenario: test data table
@@ -33,3 +37,10 @@ Feature: Playwright site
         Then I should see some debug output
 
 
+# test cases
+# npx bddgen  && npx playwright test
+# npx bddgen " " && npx playwright test
+# npx bddgen "@pw and @2002 and not  @2002.1" && npx playwright test
+# npx bddgen "@pw and @2002 and @focus" && npx playwright test
+# npx bddgen "@emergency and @4003" && npx playwright test
+# npx bddgen "@emergency and not @4003" && npx playwright test
