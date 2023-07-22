@@ -3,7 +3,7 @@
     "@cucumber/cucumber": "^9.1.0",
     "@playwright/test": "^1.32.3",
     "@types/node": "^18.16.1",
-    "playwright-bdd-rk": "^1.0.2",
+    "playwright-bdd-rk": "^1.0.3",
     "ts-node": "^10.9.1",
     "tslib": "^2.5.0",
     "typescript": "^5.0.4"
